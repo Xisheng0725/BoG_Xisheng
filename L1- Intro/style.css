@@ -1,0 +1,39 @@
+body {
+    background-color: #fff3db;
+}
+
+.name {
+    font-size: 35px;
+    font-style: normal;
+    text-align: center;
+}
+
+.intro {
+    width: fit-content;
+    padding: 30px, 30px, 20px, 20px;
+    border-radius: 12px;
+    background-color: #ffc55b;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 20px;
+    font-style: italic;
+}
+
+img {
+    max-width: 12em;
+}
+
+.Richy {
+    text-align: justify;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+}
+
+
+.word {
+    display: block;
+    margin: 0 auto;
+}
