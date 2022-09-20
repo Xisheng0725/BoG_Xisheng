@@ -8,6 +8,7 @@ h1 {
     text-align: justify;
     position: relative;
     display: flex;
+    margin-left: 3em;
 }
 
 p {
@@ -20,7 +21,7 @@ p {
     border-width: 8px;
     border-color: #B699DD;
     background-color: #FCFAF2;
-    margin-left: 3em;
+
 }
 
 #Qihui {
