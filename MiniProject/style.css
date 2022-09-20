@@ -35,3 +35,8 @@ p {
     border-radius: 50%;
     max-width: 12em;
 }
+
+.next {
+    color: #B699DD;
+    font-size: 20px;
+}
