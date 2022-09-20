@@ -1,0 +1,28 @@
+h1 {
+    color: #B699DD;
+    margin-left: 1em;
+}
+
+#image {
+    margin-top: 4em;
+    text-align: justify;
+    position: relative;
+    display: flex;
+}
+
+p {
+    font-size: 25px;
+    display: block;
+    width: fit-content;
+    padding: 30px, 30px, 10px, 10px;
+    border-radius: 12px;
+    border-style: inset;
+    border-width: 8px;
+    border-color: #B699DD;
+    background-color: #FCFAF2;
+    margin-left: 3em;
+}
+
+#Qihui {
+    border-radius: 20%;
+}
