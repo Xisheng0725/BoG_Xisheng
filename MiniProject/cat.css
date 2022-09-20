@@ -27,3 +27,16 @@ p {
 #Qihui {
     border-radius: 20%;
 }
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+#button {
+    color: #B699DD;
+    font-size: 18px;
+    background-color: #FCFAF2;
+    border-radius: 20px;
+    padding: 5px;
+}
