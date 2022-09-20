@@ -12,13 +12,15 @@ h1 {
 }
 
 p {
-    color: #B699DD;
     font-size: 25px;
     display: block;
     width: fit-content;
     padding: 30px, 30px, 10px, 10px;
     border-radius: 12px;
-    background-color: #F9E868;
+    border-style: inset;
+    border-width: 8px;
+    border-color: #B699DD;
+    background-color: #FCFAF2;
     margin: 0 auto;
 }
 
