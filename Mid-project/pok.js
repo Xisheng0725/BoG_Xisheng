@@ -1,6 +1,6 @@
 let id = 1;
 
-const refreshImg = (id = 1) => {
+const refreshImg = (id) => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
         .then((resp) => resp.json())
         .then((data) => {
@@ -12,6 +12,21 @@ const refreshImg = (id = 1) => {
             for (var i = 0; i < data.types.length; i++) {
                 type.rows[0].cells[i].innerHTML = data.types[i].type.name;
             }
+
+            var info = document.getElementById("infos");
+            info.rows[0].cells[0].innerHTML = "height";
+            info.rows[0].cells[2].innerHTML = data.height;
+
+            info.rows[1].cells[0].innerHTML = "weight";
+            info.rows[1].cells[2].innerHTML = data.stats[i].base_stat;
+            for (var i = 0; i < data.stats.length; i++) {
+                info.rows[i + 2].cells[0].innerHTML = data.stats[i].stat.name;
+                info.rows[i + 2].cells[2].innerHTML = data.stats[i].base_stat;
+            }
+
+            console.log(data.stats[0].stat);
+
+
         });
 }
 
