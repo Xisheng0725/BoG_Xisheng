@@ -1,4 +1,7 @@
 #title {
+    border-width: 3px;
+    border-style: solid;
+    border-color: #287EC7;
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
@@ -18,4 +21,12 @@
     background-color: #FCFAF2;
     border-radius: 20px;
     padding: 5px;
+}
+
+#name {
+    border-width: 3px;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    border-style: solid;
+    border-color: #287EC7;
 }

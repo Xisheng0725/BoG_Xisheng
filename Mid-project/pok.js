@@ -1,6 +1,6 @@
 let id = 1;
 
-const refreshImg = (id) => {
+const refreshImg = (id = 1) => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
         .then((resp) => resp.json())
         .then((data) => {
@@ -8,6 +8,10 @@ const refreshImg = (id) => {
             image.src = data.sprites.front_default;
             var name = document.getElementById("name");
             name.rows[0].cells[0].innerHTML = data.species.name;
+            var type = document.getElementById("type");
+            for (var i = 0; i < data.types.length; i++) {
+                type.rows[0].cells[i].innerHTML = data.types[i].type.name;
+            }
         });
 }
 
@@ -21,9 +25,10 @@ const onRightButtonClick = (right) => {
     refreshImg(id);
 }
 const onLeftButtonClick = (left) => {
-    if(id === 1) {
+    if (id === 1) {
         return;
     }
     id--;
     refreshImg(id);
 }
+refreshImg(1)
