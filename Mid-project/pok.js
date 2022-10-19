@@ -80,6 +80,12 @@ const refreshImg = (id) => {
                 info.rows[i + 2].cells[2].innerHTML = data.stats[i].base_stat;
             }
 
+            for (var i = 8; i < info.rows.length; i++) {
+                info.rows[i].cells[0].innerHTML = "";
+            }
+
+
+
             
             var move = document.getElementById("move");
 
