@@ -24,15 +24,17 @@
             </table>
             <p id="type:"> Type: </p>
             <table id="type">
-                <tr>
+                <tr id="nameStyle">
                     <th></th>
                     <th></th>
                     <th></th>
                 </tr>
             </table>
+            <div id="button">
+                <button onclick="onLeftButtonClick()" id="buttonLeft"> Pre</button>
+                <button onclick="onRightButtonClick()" id="buttonRight"> Next</button>
+            </div>
 
-            <button onclick="onLeftButtonClick()" id="buttonLeft"> Pre</button>
-            <button onclick="onRightButtonClick()" id="buttonRight"> Next</button>
         </div>
 
 
@@ -206,9 +208,11 @@
                     <th></th>
                 </tr>
             </table>
+            <div id="button">
+                <button onclick="oninfoButtonClick()" id="infoButton">Info</button>
+                <button id="move">Move</button>
+            </div>
 
-            <button onclick="oninfoButtonClick()" id="infoButton">Info</button>
-            <button id="move">Move</button>
         </div>
     </div>
 
