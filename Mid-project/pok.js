@@ -1,5 +1,4 @@
 let id = 1;
-
 const refreshImg = (id) => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
         .then((resp) => resp.json())
@@ -12,23 +11,32 @@ const refreshImg = (id) => {
             for (var i = 0; i < data.types.length; i++) {
                 type.rows[0].cells[i].innerHTML = data.types[i].type.name;
             }
-
             var info = document.getElementById("infos");
             info.rows[0].cells[0].innerHTML = "height";
-            info.rows[0].cells[2].innerHTML = data.height;
+            info.rows[0].cells[2].innerHTML = Math.round(data.height * 0.1 * 100) / 100 + "m";
 
             info.rows[1].cells[0].innerHTML = "weight";
-            info.rows[1].cells[2].innerHTML = data.stats[i].base_stat;
+            info.rows[1].cells[2].innerHTML = data.weight + "kg";
             for (var i = 0; i < data.stats.length; i++) {
+                info.rows[0].cells[1].innerHTML = ":";
+                info.rows[1].cells[1].innerHTML = ":";
                 info.rows[i + 2].cells[0].innerHTML = data.stats[i].stat.name;
+                info.rows[i + 2].cells[1].innerHTML = ":";
                 info.rows[i + 2].cells[2].innerHTML = data.stats[i].base_stat;
             }
+            var move = document.getElementById("move");
 
-            console.log(data.stats[0].stat);
-
-
+            move.addEventListener('click', function handleClick() {
+                var info = document.getElementById("infos");
+                for (var i = 0; i < data.moves.length; i++) {
+                    info.rows[i].cells[0].innerHTML = data.moves[i].move.name;
+                    info.rows[i].cells[1].innerHTML = "";
+                    info.rows[i].cells[2].innerHTML = "";
+                }
+            });
         });
 }
+refreshImg(1);
 
 var right = document.getElementById("buttonRight");
 var left = document.getElementById("buttonleft");
@@ -46,4 +54,8 @@ const onLeftButtonClick = (left) => {
     id--;
     refreshImg(id);
 }
-refreshImg(1)
+
+var infoButton = document.getElementById("infobutton");
+const oninfoButtonClick = (infoButton) => {
+    refreshImg(id, infoButton);
+}

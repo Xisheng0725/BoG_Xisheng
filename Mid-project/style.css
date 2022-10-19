@@ -35,3 +35,9 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+#infos{
+    border-width: 3px;
+    border-style: solid;
+    background-color: gainsboro;
+}
