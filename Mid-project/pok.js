@@ -24,10 +24,17 @@ const refreshImg = (id) => {
                 info.rows[i + 2].cells[1].innerHTML = ":";
                 info.rows[i + 2].cells[2].innerHTML = data.stats[i].base_stat;
             }
+
+            for (var i = data.stats.length; i < info.length; i++) {
+                info.rows[i].cells[0].innerHTML = "";
+            }
+            
             var move = document.getElementById("move");
 
             move.addEventListener('click', function handleClick() {
                 var info = document.getElementById("infos");
+                var sub = document.getElementById("sub");
+                sub.row[0].cells[0].innerHTML = "Move";
                 for (var i = 0; i < data.moves.length; i++) {
                     info.rows[i].cells[0].innerHTML = data.moves[i].move.name;
                     info.rows[i].cells[1].innerHTML = "";
@@ -57,5 +64,5 @@ const onLeftButtonClick = (left) => {
 
 var infoButton = document.getElementById("infobutton");
 const oninfoButtonClick = (infoButton) => {
-    refreshImg(id, infoButton);
+    refreshImg(id);
 }
